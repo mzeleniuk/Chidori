@@ -1,12 +1,8 @@
-# chidori
+# Chidori
 
-This project is generated with [yo angular generator](https://github.com/yeoman/generator-angular)
-version 0.11.1.
+Chidori is web application, created with Angular, Node, and Token Authentication technologies.
+The application is designed for job search.
 
-## Build & development
+#### Build & development
 
 Run `grunt` for building and `grunt serve` for preview.
-
-## Testing
-
-Running `grunt test` will run the unit tests with karma.
