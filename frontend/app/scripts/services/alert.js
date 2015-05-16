@@ -12,9 +12,10 @@ angular.module('chidoriApp').service('alert', function alert($rootScope, $timeou
             message: message,
             title: title
         };
+        
         $timeout.cancel(alertTimeout);
         alertTimeout = $timeout(function () {
             $rootScope.alert.show = false;
         }, timeout || 2000);
     };
-  });
+});
