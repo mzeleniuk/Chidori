@@ -7,4 +7,6 @@ The application is designed for job search.
 
 Run `grunt` for building and `grunt serve` for preview.
 
-The application uses MongoDB NoSQL database.
+Run `node api` for API listening.
+
+The application uses [MongoDB](https://www.mongodb.org) NoSQL database.
