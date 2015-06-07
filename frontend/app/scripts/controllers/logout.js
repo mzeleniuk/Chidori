@@ -1,6 +1,6 @@
 'use strict';
 
-angular.module('chidoriApp').controller('LogoutCtrl', function (authToken, $state) {
-    authToken.removeToken();
+angular.module('chidoriApp').controller('LogoutCtrl', function ($auth, $state) {
+    $auth.logout();
     $state.go('main');
 });

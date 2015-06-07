@@ -1,3 +1,3 @@
 'use strict';
 
-angular.module('chidoriApp', ['ui.router', 'ngAnimate']);
+angular.module('chidoriApp', ['ui.router', 'ngAnimate', 'satellizer']);

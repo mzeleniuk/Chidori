@@ -1,6 +1,6 @@
 'use strict';
 
-angular.module('chidoriApp').config(function($urlRouterProvider, $stateProvider, $httpProvider) {
+angular.module('chidoriApp').config(function($urlRouterProvider, $stateProvider, $httpProvider, $authProvider, API_URL) {
     
     $urlRouterProvider.otherwise('/');
     
@@ -32,6 +32,19 @@ angular.module('chidoriApp').config(function($urlRouterProvider, $stateProvider,
     .state('logout', {
         url: '/logout',
         controller: 'LogoutCtrl'
+    });
+    
+    $authProvider.loginUrl = API_URL + 'login';
+    $authProvider.signupUrl = API_URL + 'register';
+    
+    $authProvider.google({
+        clientId: '755194447289-i6qu5n18jnh4lhph17j19cq08i0fq6f4.apps.googleusercontent.com',
+        url: API_URL + 'auth/google'
+    });
+    
+    $authProvider.facebook({
+        clientId: '698580886903269',
+        url: API_URL + 'auth/facebook'
     });
     
     $httpProvider.interceptors.push('authInterceptor');

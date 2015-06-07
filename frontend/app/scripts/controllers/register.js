@@ -1,13 +1,14 @@
 'use strict';
 
-angular.module('chidoriApp').controller('RegisterCtrl', function ($scope, alert, auth) {
+angular.module('chidoriApp').controller('RegisterCtrl', function ($scope, alert, $auth) {
     $scope.submit = function() {
         
-        auth.register($scope.email, $scope.password)
-            .success(function(res) {
-            alert('success', 'Account Created!', 'Welcome, ' + res.user.email + '!');
-        })
-        .error(function(err) {
+        $auth.signup({
+            email: $scope.email,
+            password: $scope.password
+        }).then(function(res) {
+            alert('success', 'Account Created!', 'Welcome, ' + res.data.user.email + '!');
+        }).catch(function(err) {
             alert('warning', 'Something went wrong!', err.message);
         });
     };
