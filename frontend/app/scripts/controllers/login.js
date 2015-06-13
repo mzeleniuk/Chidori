@@ -6,7 +6,13 @@ angular.module('chidoriApp').controller('LoginCtrl', function ($scope, alert, au
             email: $scope.email,
             password: $scope.password
         }).then(function(res) {
-            alert('success', 'Welcome!', 'Thanks for coming back, ' + res.data.user.email + '!');
+            var message = 'Thanks for coming back, ' + res.data.user.email + '!';
+            
+            if (!res.data.user.active) {
+                message = 'Just a reminder, please check your email and activate your account soon.';
+            }
+            
+            alert('success', 'Welcome!', message);
         }).catch(handleError);
     };
     
