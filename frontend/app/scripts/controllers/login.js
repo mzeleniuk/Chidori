@@ -1,6 +1,10 @@
 'use strict';
 
 angular.module('chidoriApp').controller('LoginCtrl', function ($scope, alert, auth, $auth) {
+    function handleError() {
+        alert('warning', 'Something went wrong!');
+    }
+
     $scope.submit = function() {        
         $auth.login({
             email: $scope.email,
@@ -21,8 +25,4 @@ angular.module('chidoriApp').controller('LoginCtrl', function ($scope, alert, au
             alert('success', 'Welcome!', 'Thanks for coming back, ' + res.data.user.displayName + '!');
         }, handleError);
     };
-    
-    function handleError(err) {
-        alert('warning', 'Something went wrong!', err.message);
-    }
 });

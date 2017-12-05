@@ -1,21 +1,26 @@
 {
   "name": "api",
-  "version": "1.0.0",
-  "description": "",
+  "version": "1.0.1",
+  "description": "Chidori API",
   "main": "api.js",
   "scripts": {
-    "test": "echo \"Error: no test specified\" && exit 1"
+    "test": "echo \"Error: no test specified\" && exit 0"
   },
   "author": "Michael Zelenyuk",
   "license": "ISC",
   "dependencies": {
     "bcrypt-nodejs": "0.0.3",
-    "body-parser": "^1.12.4",
+    "body-parser": "1.12.4",
     "crypto": "0.0.3",
-    "express": "^4.12.3",
-    "jwt-simple": "^0.3.0",
-    "mongoose": "^4.0.3",
-    "passport": "^0.2.2",
-    "passport-local": "^1.0.0"
+    "express": "4.12.4",
+    "jwt-simple": "0.3.1",
+    "moment": "2.19.3",
+    "mongoose": "4.0.8",
+    "nodemailer": "4.4.0",
+    "nodemailer-smtp-transport": "2.7.4",
+    "passport": "0.2.2",
+    "passport-local": "1.0.0",
+    "request": "2.83.0",
+    "underscore": "1.8.3"
   }
 }
